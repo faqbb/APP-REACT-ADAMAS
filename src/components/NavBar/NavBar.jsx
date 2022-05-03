@@ -13,7 +13,8 @@ function NavBar() {
           <Nav.Link href="#home" className='text-light fs-5 pe-5 secondaryfont'>Funcional, Pilates y Yoga</Nav.Link>
           <Nav.Link href="#link" className='text-light fs-5 pe-5 secondaryfont'>Maquinas de Musculacion</Nav.Link>
           <Nav.Link href="#link" className='text-light fs-5 pe-5 secondaryfont'>Pesas, Discos y Barras</Nav.Link>
-          <Nav.Link href="#link" className='text-light fs-5 pe-5 secondaryfont'>Protección y Rehabilitación</Nav.Link>
+          <Nav.Link href="#link" className='text-light fs-5 pe-5 secondaryfont'>Proteccion y Rehabilitacion</Nav.Link>
+          <Nav.Link href="#link" className='text-light fs-5 pe-5 secondaryfont'>Maquinas Cardiovasculares</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
