@@ -4,17 +4,18 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar'
 import Banner from './components/Banner/Banner';
+import ItemListContainer from './components/ItemListContainer';
 
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const producto  = 'mancuerna'
   return (
     <div className="App">
       < Banner/>
       < NavBar/>
       <header className="App-header">
-        
+        <ItemListContainer productos= { producto }/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>

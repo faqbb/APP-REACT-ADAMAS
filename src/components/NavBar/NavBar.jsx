@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
-import logo from '../imgs/logo.png';
 import '../fonts/fonts.css'
+import CartWidget from './CartWidget';
 
 
 function NavBar() {
@@ -15,6 +15,7 @@ function NavBar() {
           <Nav.Link href="#link" className='text-light fs-5 pe-5 secondaryfont'>Pesas, Discos y Barras</Nav.Link>
           <Nav.Link href="#link" className='text-light fs-5 pe-5 secondaryfont'>Proteccion y Rehabilitacion</Nav.Link>
           <Nav.Link href="#link" className='text-light fs-5 pe-5 secondaryfont'>Maquinas Cardiovasculares</Nav.Link>
+          <Nav.Link href="#link"><CartWidget /></Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
