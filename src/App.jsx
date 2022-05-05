@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar'
 import Banner from './components/Banner/Banner';
 import ItemListContainer from './components/ItemListContainer';
+import ItemCount from './components/Cards/ItemCount';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       < NavBar/>
       <header className="App-header">
         <ItemListContainer productos= { producto }/>
+        <ItemCount stock={5} initial={1}/>
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
