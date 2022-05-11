@@ -3,16 +3,10 @@ import { useState } from 'react'
 
 function ItemCount({stock, initial}) {
     const [cantpro, setCantpro] = useState(initial)
-    function sumarpro (){
-        if (!(cantpro == stock)){
-            setCantpro(cantpro + 1)
+    function sumarpro (props){
+        setCantpro(cantpro + props)
             }
-        }
-    function restarpro (){
-        if (!(cantpro == initial)){
-            setCantpro(cantpro - 1)
-            }
-        }
+
     function agregarCarrito (){
         console.log('Has agregado '+ cantpro + ' productos al carrito')
     }
@@ -20,12 +14,12 @@ function ItemCount({stock, initial}) {
   return (
       < div className='d-flex col-12 justify-content-around bg-secondary'>
         <div>stock = {stock}</div>
-        <button onClick={ restarpro }>-</button>
+        <button onClick={() => sumarpro(-1) }  disabled={cantpro === initial ? true : null}>-</button>
         <div>{ cantpro }</div>
-        <button onClick={ sumarpro }>+</button>
+        <button onClick={ () => sumarpro(+1) } disabled={cantpro === stock ? true : null}>+</button>
         <button onClick={ agregarCarrito }> Enviar al carrito</button>
       </div>
   )
-}
 
+  }
 export default ItemCount
