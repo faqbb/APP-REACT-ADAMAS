@@ -1,24 +1,24 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar'
 import Banner from './components/Banner/Banner';
 import ItemListContainer from './components/Products/ItemListContainer';
-import ItemCount from './components/Cards/ItemCount';
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
   const producto  = 'mancuerna'
   return (
-    <div className="App">
+    <BrowserRouter >
+    <div className="App bg-dark">
       < Banner/>
       < NavBar/>
-        <ItemListContainer productos= { producto }/>
-        <ItemCount stock={5} initial={1}/>
-        
-      </div>
+      <Routes>  
+        <Route path='/itemlist' element= { <ItemListContainer  /> } />
+      </Routes>
+    </div>
+    </BrowserRouter>
   )
 }
 

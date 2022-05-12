@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import '../fonts/fonts.css'
 
 function ItemCount({stock, initial}) {
     const [cantpro, setCantpro] = useState(initial)
@@ -12,12 +13,11 @@ function ItemCount({stock, initial}) {
     }
 
   return (
-      < div className='d-flex col-12 justify-content-around bg-secondary'>
-        <div>stock = {stock}</div>
-        <button onClick={() => sumarpro(-1) }  disabled={cantpro === initial ? true : null}>-</button>
-        <div>{ cantpro }</div>
-        <button onClick={ () => sumarpro(+1) } disabled={cantpro === stock ? true : null}>+</button>
-        <button onClick={ agregarCarrito }> Enviar al carrito</button>
+      < div className='d-flex col-12 justify-content-around bg-secondary align-items-center'>
+        <button onClick={() => sumarpro(-1) }  disabled={cantpro === initial ? true : null} className='btn btn-dark'>-</button>
+        <div className='mainfont'>{ cantpro }</div>
+        <button onClick={ () => sumarpro(+1) } disabled={cantpro === stock ? true : null} className='btn btn-dark'>+</button>
+        <button onClick={ agregarCarrito } className='btn btn-danger'> Enviar al carrito</button>
       </div>
   )
 

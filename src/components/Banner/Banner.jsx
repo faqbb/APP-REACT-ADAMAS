@@ -2,15 +2,15 @@ import React from 'react'
 import { Row } from 'react-bootstrap'
 import logo from '../imgs/logo.png'
 import '../fonts/fonts.css'
-
+import '../Style/Banner.css'
+import { Link } from 'react-router-dom'
 const Banner = () => {
   return (
-    <Row className='bg-dark g-0 align-items-center justify-content-center'>
+    <div className='bg-dark g-0 align-items-center justify-content-center d-flex'>
         <h1 className='fs-1 mainfont text-light'>ADAMAS</h1>
-        <div><img src={logo} alt="logo" className='img-fluid w-25' /></div>
-        
+        <Link to={'/'} ><img src={logo} alt="logo" className='w-50' /></Link>
         <h2 className='fs-1 mainfont text-light'>SHOP</h2>
-    </Row>
+    </div>
   )
 }
 

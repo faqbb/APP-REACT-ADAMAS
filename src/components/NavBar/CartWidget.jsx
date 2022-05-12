@@ -1,9 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import cart from '../imgs/cartwidget.png'
 function CartWidget() {
   return (
      <>
-    <img src={cart} className='w-25'></img>
+      <Link to={'/cart'}>
+      <img src={cart} className='w-50'></img>
+      </Link>
     </> 
   )
 }
