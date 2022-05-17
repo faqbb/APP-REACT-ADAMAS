@@ -1,16 +1,15 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import ItemCount from '../Cards/ItemCount'
+import { Link } from 'react-router-dom'
 import '../fonts/fonts.css'
 
 
-function Item( { image, nombre , desc, precio, stock }) {
+function Item( { image, nombre , desc, precio, stock, id }) {
   return (
-    
     <Card style={{ width: '19rem' }} className='bg-secondary'>
   <Card.Img variant="top" src= {image} />
   <Card.Body>
-    <Card.Title className='secondaryfont fs-2 text-light'>{nombre}</Card.Title>
+    <Card.Title className='secondaryfont fs-3 text-light'>{nombre}</Card.Title>
     <Card.Text className='secondaryfont fs-6'>
       {desc}
     </Card.Text>
@@ -20,7 +19,9 @@ function Item( { image, nombre , desc, precio, stock }) {
     <Card.Text className='fs-6 secondaryfont'>
       Disponibles = {stock}
     </Card.Text>
-    <ItemCount stock={stock} initial={1}/>
+    <Link to={`/fpyy/${id}`}>
+      <button  className='btn btn-danger mainfont'> Ver mas</button>
+    </Link>
   </Card.Body>
 </Card>
   )

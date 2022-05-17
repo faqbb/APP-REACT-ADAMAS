@@ -1,10 +1,11 @@
 import React from 'react'
 import ItemList from './ItemList'
 
-function ItemListContainer( ) {
+function ItemListContainer( {category} ) {
+  console.log(category)
   return (
     <div>
-      <ItemList/>
+      <ItemList filter={category} />
     </div>
   )
 }

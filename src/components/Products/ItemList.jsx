@@ -3,15 +3,15 @@ import Item from './Item'
 import products from '../../../data/products'
 import '../fonts/fonts.css'
 
-function ItemList() {
-    
+function ItemList( {filter} ) {
+    console.log(filter)
 const [prods, setProds] = useState([])
 const [loading,setLoading] =useState(true)
 
 let getProds = new Promise ((acep) => {
     setTimeout(() => {
         acep(products)
-    }, 2000);
+    }, 1000);
 })
 useEffect(() => {
     getProds.then(acep => setProds(acep))
@@ -21,13 +21,14 @@ useEffect(() => {
 
 getProds.then(setProds)
 
+const prodsFil = prods.filter((prod) => prod.category == filter)
 
   return (
     <div className='d-flex justify-content-around bg-dark flex-wrap'>
         { loading ? 
             <h1 className='mainfont fs-1 text-light'>Cargando...</h1>
          :
-        prods.map((product) => {
+        prodsFil.map((product) => {
             return (
                 <div key={product.id} >  
                 <Item
@@ -36,6 +37,7 @@ getProds.then(setProds)
                     desc={product.desc}
                     precio={product.precio}
                     stock={product.stock}
+                    id={product.id}
                 />             
                 </div>
             )
