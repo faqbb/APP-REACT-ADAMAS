@@ -2,7 +2,7 @@ import React from 'react'
 import fonts from '../fonts/fonts.css'
 function Footer() {
   return (
-    <div className='row justify-content-around bg-dark fixed-bottom position-relative'>
+    <div className='row justify-content-around bg-dark bottom-0'>
         <div>
             <ul className='d-flex m-0'>
                 <li className='px-3 pt-3'><img src='../src/components/imgs/wpp.png'className='img-fluid'></img></li>
