@@ -14,7 +14,6 @@ function App() {
     <div className="App bg-dark overflow-hidden">
       < Banner/>
       < NavBar/>
-      < Footer/>
       <Routes>  
         <Route path='/category/fpyy' element= { <ItemListContainer category={'fpyy'} /> } />
         <Route path='/category/mm' element= { <ItemListContainer category={'mm'} /> } />
@@ -23,6 +22,7 @@ function App() {
         <Route path='/category/mc' element= { <ItemListContainer category={'mc'} /> } />
         <Route path='/fpyy/:detailId' element = {<ItemDetailContainer />} />
       </Routes>
+      < Footer/>
     </div>
     </BrowserRouter>
   )
