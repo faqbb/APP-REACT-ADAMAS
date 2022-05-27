@@ -32,11 +32,7 @@ function ItemDetailContainer() {
             <h1 className='mainfont fs-1 text-light'>Cargando...</h1>
             :
             <ItemDetail 
-            image={itemFind.image}
-            nombre={itemFind.nombre}
-            desc={itemFind.desc}
-            precio={itemFind.precio}
-            stock={itemFind.stock}
+            prods={itemFind}
             />
         }
     </div>
